@@ -36,35 +36,35 @@ const images = [
 //   createsListOfImg(images);
 
 // --вирішення 2--
-
 // const createsListOfImg = (images) => {
-//     const selectedByIdGalleryEl = document.querySelector('#gallery');
-//     const liItems = images.map(imag => {
+//   const selectedByIdGalleryEl = document.querySelector('#gallery');
+//   const liItems = images.map(imag => {
 
-//         const positionLiGalleryEl = document.createElement('li');
+//       const positionLiGalleryEl = document.createElement('li.imeges-list');
 
-//         positionLiGalleryEl.insertAdjacentHTML('beforeend', `<img src= ${imag.url} alt = ${imag.alt}></img>`);
+//       positionLiGalleryEl.insertAdjacentHTML('beforeend', `<img class="images-items" src= ${imag.url} alt = '${imag.alt}'></img>`);
 
-//         return positionLiGalleryEl;
-//     })
+//       return positionLiGalleryEl;
+//   })
 
-//     selectedByIdGalleryEl.append(...liItems);
-//     }
+//   selectedByIdGalleryEl.append(...liItems);
+//   }
 
 // createsListOfImg(images);
 
-// --вирішення 3--
 
-function createsListOfImg(images) {
+// --вирішення 3 було неправильне, не можна два рази зверататися до дерева DOM--
+
+const createsListOfImg = (images) => {
   const selectedByIdGalleryEl = document.querySelector("#gallery");
 
-  const liItems = images.forEach((imag) => {
-    return selectedByIdGalleryEl.insertAdjacentHTML(
-      "beforeend",
-      `<li class="imeges-list"><img class="images-items" src = ${imag.url} 
-      alt = "${imag.alt}"></img></li>`
-    );
-  });
-}
+  const liItems = images.reduce((imegeList, imag) => imegeList + `<li class="imeges-list"><img class="images-items" src = '${imag.url}' 
+  alt = '${imag.alt}'></img></li>`, '');
+    
+  selectedByIdGalleryEl.insertAdjacentHTML('afterbegin', liItems);
+
+  }
 
 createsListOfImg(images);
+
+
