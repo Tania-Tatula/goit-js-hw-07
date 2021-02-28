@@ -29,25 +29,17 @@ const handleIntroductionNumber = () => {
   let counter = 1;
     while(counter <= numberOfInputs){
      
-        
-    boxesEl.insertAdjacentHTML('afterbegin', '<div></div>');
-  
-    counter += 1;
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
     }
+    const colorNumvber = 'rgb(' +`${getRandomInt(0, 1000)}` + ',' + `${getRandomInt(0, 1000)}` + ',' + `${getRandomInt(0, 1000)}` +')' ;
+    const blockSize = 30 + counter * 10;
+    
+    const a = boxesEl.insertAdjacentHTML('afterbegin', `<div style='height: ${blockSize}px; width: ${blockSize}px; background-color: ${colorNumvber}'></div>`);
+    console.log(a);
+    counter += 1;
 
-    while(counter <= numberOfInputs){
-     
-        
-      function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
-      }
-      const colorNumvber = 'rgb(' +`${getRandomInt(0, 1000)}` + ',' + `${getRandomInt(0, 1000)}` + ',' + `${getRandomInt(0, 1000)}` +')' ;
-      const blockSize = 30 + counter * 10;
-      boxStyles.setAttribute("style", `height: ${blockSize}px; width: ${blockSize}px; background-color: ${colorNumvber}`);
-      counter += 1;
-      }
-    
-    
+    }
     
 }
 
