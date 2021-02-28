@@ -95,11 +95,17 @@ const btnRender = btnDestroy.previousElementSibling;
 const boxesEl = document.querySelector("#boxes");
 const numberEl = btnBox.firstElementChild;
 
-const handleClearOutput = () => {
+function handleClearOutput(){
   boxesEl.innerHTML = "";
 };
 
-const handleIntroductionNumber = () => {
+function handleIntroductionNumber(){
+  
+    if(boxesEl.childNodes.length != 0){
+      handleClearOutput();
+      handleIntroductionNumber();
+    return
+  }
 
   const numberOfInputs = numberEl.value;
   const result = [];
@@ -124,7 +130,9 @@ const handleIntroductionNumber = () => {
     result.push(divs);
   }
   boxesEl.append(...result);
+
 };
+
 
 btnDestroy.addEventListener("click", handleClearOutput);
 btnRender.addEventListener("click", handleIntroductionNumber);
