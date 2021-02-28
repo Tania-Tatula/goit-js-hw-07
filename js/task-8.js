@@ -32,12 +32,5 @@ const handleIntroductionNumber = () => {
     
 }
 
-
-
 btnDestroy.addEventListener('click', handleClearOutput);
 btnRender.addEventListener('click', handleIntroductionNumber);
-
-
-
-
-

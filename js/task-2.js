@@ -9,7 +9,7 @@
 
    
 
-    const createsListOfProducts = (products) => {
+    function createsListOfProducts(products){
               
         
     const selectedById = document.querySelector('#ingredients');
@@ -24,7 +24,7 @@
   }
   
 // --вирішення 2--
-//   const createsListOfProducts = (products) => {
+//   function createsListOfProducts(products){
                
 //     const selectedById = document.querySelector('#ingredients');
 //     const elementStringEl = products.reduce(

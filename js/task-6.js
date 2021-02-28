@@ -1,7 +1,7 @@
 const inputEl = document.querySelector('#validation-input');
 
 
-const handleInputFocus = (event) => {
+function handleInputFocus(event) {
     event.preventDefault();
 
     if(`${event.currentTarget.value.length}` === `${inputEl.getAttribute('data-length')}`){

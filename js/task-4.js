@@ -3,7 +3,7 @@ const addListenerBtn = counter.lastElementChild;
 const  counterValue = document.querySelector("#value");
 
 
-const increment = () => {
+function increment(){
     
     return counterValue.textContent = Number(counterValue.textContent) + 1;
 };

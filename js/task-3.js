@@ -57,7 +57,7 @@ const images = [
 
 // --вирішення 3--
 
-const createsListOfImg = (images) => {
+function createsListOfImg(images){
     const selectedByIdGalleryEl = document.querySelector('#gallery');
    
     const liItems = images.forEach(imag => {

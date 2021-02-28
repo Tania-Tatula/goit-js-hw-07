@@ -1,9 +1,11 @@
 const controlFontSizeEl = document.querySelector('#font-size-control');
 const textEl = document.querySelector('#text');
 
-const resizesЕext = (event) => {
+controlFontSizeEl.addEventListener('input', resizesЕext);
+
+function resizesЕext(event){
 
     textEl.style.fontSize = `${event.currentTarget.value}px`;
 }
    
-controlFontSizeEl.addEventListener('click', resizesЕext);
+

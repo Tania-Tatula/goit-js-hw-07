@@ -4,22 +4,22 @@ const nameEl = document.querySelector('#name-output');
 
 
 
-// const handleSubmit = (event) => {
-//     event.preventDefault();
+function handleSubmit(event){
+    event.preventDefault();
 
     
-//         if(event.currentTarget.value === ''){
-//             return nameEl.textContent = 'незнакомец';
-//         } 
-//         return nameEl.textContent = event.currentTarget.value;
+        if(event.currentTarget.value === ''){
+            return nameEl.textContent = 'незнакомец';
+        } 
+        return nameEl.textContent = event.currentTarget.value;
         
     
-//     }
+    }
 
     nameUserEl.addEventListener('input', handleSubmit);
  
  
 //  ---вирішення 2-----
-    function handleSubmit(event){
-    nameEl.textContent = event.currentTarget.value;
-   }
+//     function handleSubmit(event){
+//     nameEl.textContent = event.currentTarget.value;
+//    }
