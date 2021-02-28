@@ -103,10 +103,10 @@ const handleIntroductionNumber = () => {
 
   const numberOfInputs = numberEl.value;
   const result = [];
-  
+
   for (let i = 0; i < numberOfInputs; i += 1) {
     const divs = document.createElement("div");
-    console.log(divs);
+    
     function getRandomInt(min, max) {
       return Math.floor(Math.random() * (max - min)) + min;
     }
