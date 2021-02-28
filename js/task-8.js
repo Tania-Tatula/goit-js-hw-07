@@ -5,17 +5,6 @@ const boxesEl = document.querySelector('#boxes');
 const numberEl = btnBox.firstElementChild;
 const boxStyles = boxesEl.children;
 
-// function getRandomInt(min, max) {
-//         return Math.floor(Math.random() * (max - min)) + min;
-//       }
-// const colorNumvber = 'rgb(' +`${getRandomInt(0, 1000)}` + ',' + `${getRandomInt(0, 1000)}` + ',' + `${getRandomInt(0, 1000)}` +')' ;
-// const counter = 2;
-// const blockSize = 30 + counter * 10;
-// const b = `height: ${blockSize}px; width: ${blockSize}px; background-color: ${colorNumvber}`;
-// console.log(b)
-// boxesEl.insertAdjacentHTML('afterbegin', `<div style='height: '${blockSize}px'; width: '${blockSize}px'; background-color: '${colorNumvber}'></div>`);
-
-
 const handleClearOutput = () => {
     
     boxesEl.innerHTML ='';
@@ -24,7 +13,7 @@ const handleClearOutput = () => {
 
 const handleIntroductionNumber = () => {
 
-    // --- не виходить зробити, щоб додавало без циклу за один раз і додати стилі-----
+    // --- не виходить зробити, щоб додавало без циклу за один раз-----
   const numberOfInputs = numberEl.value
   let counter = 1;
     while(counter <= numberOfInputs){
@@ -35,8 +24,8 @@ const handleIntroductionNumber = () => {
     const colorNumvber = 'rgb(' +`${getRandomInt(0, 1000)}` + ',' + `${getRandomInt(0, 1000)}` + ',' + `${getRandomInt(0, 1000)}` +')' ;
     const blockSize = 30 + counter * 10;
     
-    const a = boxesEl.insertAdjacentHTML('afterbegin', `<div style='height: ${blockSize}px; width: ${blockSize}px; background-color: ${colorNumvber}'></div>`);
-    console.log(a);
+    const boxingElementCreator = boxesEl.insertAdjacentHTML('afterbegin', `<div style='height: ${blockSize}px; width: ${blockSize}px; background-color: ${colorNumvber}'></div>`);
+    
     counter += 1;
 
     }
